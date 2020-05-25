@@ -549,5 +549,5 @@ breaks <- quantile(testTable[,2], probs = seq(.05, .95, .05), na.rm = TRUE)
 colors <- round(seq(255, 40, length.out = length(breaks) + 1), 0) %>%
 {paste0("rgb(", ., ",240,", ., ")")}
 datatable(testTable) %>%
-  formatStyle(names(testTable), backgroundColor = styleInterval(breaks,colors))
+  formatStyle(names(testTable), backgroundColor = styleInterval(breaks,colors), 'font-size' = '14pt', 'font-family' = 'Calibri')
 }
